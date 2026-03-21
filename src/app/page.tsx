@@ -1,101 +1,168 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "统一场论信息站 — 一个农民、一个方程、一场可能改变人类文明的实验",
+  description:
+    "张祥前的统一场论预测变化电磁场产生引力场，他用简陋设备做出了实验验证，美国海军独立地在研究同一方向。",
+};
+
+const features = [
+  {
+    title: "统一场论",
+    description:
+      "用一个核心方程统一电场、磁场、引力场和核力场。物体和空间，没有第三种存在。",
+    href: "/theory/overview",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+      </svg>
+    ),
+  },
+  {
+    title: "实验验证",
+    description:
+      "加速电荷产生引力场、变化磁场令小球旋转。低成本可复现方案，设备预算仅需几千元。",
+    href: "/experiment/overview",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+      </svg>
+    ),
+  },
+  {
+    title: "海军专利对比",
+    description:
+      "美国海军 Pais 博士的惯性质量减少装置专利，与张祥前的理论描述了同一物理现象。",
+    href: "/comparison/navy-patents",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+      </svg>
+    ),
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-primary-900 via-primary-800 to-primary-700 text-white">
+        <div className="max-w-5xl mx-auto px-4 py-20 md:py-32 text-center">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
+            一个农民、一个方程、
+            <br />
+            <span className="text-gold-400">一场可能改变人类文明的实验</span>
+          </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="max-w-3xl mx-auto space-y-4 text-lg md:text-xl text-gray-200 mb-12">
+            <p>张祥前的统一场论预测：<strong className="text-white">变化电磁场可以产生引力场</strong></p>
+            <p>他用简陋的实验设备，观测到了这一现象</p>
+            <p>而美国海军，独立地在研究同一方向</p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/theory/overview"
+              className="px-8 py-3 bg-gold-500 text-primary-900 font-semibold rounded-lg hover:bg-gold-400 transition-colors"
+            >
+              深入了解理论
+            </Link>
+            <Link
+              href="/experiment/overview"
+              className="px-8 py-3 bg-white/10 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
+            >
+              查看实验
+            </Link>
+            <Link
+              href="/comparison/navy-patents"
+              className="px-8 py-3 bg-white/10 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
+            >
+              海军专利对比
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Features */}
+      <section className="max-w-5xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {features.map((feature) => (
+            <Link
+              key={feature.href}
+              href={feature.href}
+              className="group p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all"
+            >
+              <div className="text-primary-600 mb-4">{feature.icon}</div>
+              <h2 className="text-xl font-semibold text-primary-800 mb-2 group-hover:text-primary-600">
+                {feature.title}
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {feature.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Core thesis */}
+      <section className="bg-primary-50">
+        <div className="max-w-4xl mx-auto px-4 py-16">
+          <h2 className="text-2xl font-bold text-primary-800 mb-6 text-center">
+            核心观点
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-primary-700 mb-2">宇宙只有两种存在</h3>
+              <p className="text-gray-600 text-sm">
+                物体和空间（场），没有第三种。空间本身可以运动，空间的运动就是场。四种基本力都是空间螺旋运动的不同分量。
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-primary-700 mb-2">变化电磁场产生引力场</h3>
+              <p className="text-gray-600 text-sm">
+                当电磁场加速变化时，会产生引力场效应。这一预测已通过多组实验初步验证，并与美国海军专利的方向不谋而合。
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-primary-700 mb-2">低成本可复现</h3>
+              <p className="text-gray-600 text-sm">
+                与美国海军需要数百万美元的设备不同，张祥前的实验方案仅需几千元人民币的设备即可尝试复现。
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-primary-700 mb-2">呼吁独立验证</h3>
+              <p className="text-gray-600 text-sm">
+                本站不做真假判断。我们呈现理论和实验，呼吁有条件的实验室和研究者独立复现，用科学方法检验。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="max-w-4xl mx-auto px-4 py-16 text-center">
+        <h2 className="text-2xl font-bold text-primary-800 mb-4">
+          从哪里开始？
+        </h2>
+        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          如果你对物理学感兴趣，建议从理论总览开始。如果你有实验条件，可以直接查看实验方案。如果你想了解国际背景，请阅读海军专利对比。
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/theory/overview"
+            className="px-6 py-3 bg-primary-700 text-white rounded-lg hover:bg-primary-600 transition-colors"
+          >
+            从理论开始
+          </Link>
+          <Link
+            href="/experiment/setup"
+            className="px-6 py-3 border border-primary-300 text-primary-700 rounded-lg hover:bg-primary-50 transition-colors"
+          >
+            查看实验方案
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
