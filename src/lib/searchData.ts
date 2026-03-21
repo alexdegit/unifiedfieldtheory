@@ -105,7 +105,7 @@ export const searchData: SearchItem[] = [
     title: "呼吁复现",
     titleEn: "Call for Replication",
     description: "独立复现是最关键的一步。设备预算约2000-2500元。大学物理实验室即可尝试。",
-    descriptionEn: "Independent replication is the most critical step. Equipment budget ~2000-2500 RMB. University physics labs can attempt it.",
+    descriptionEn: "Independent replication is the most critical step. Equipment budget ~$300-500 USD. University physics labs can attempt it.",
     keywords: "复现 独立验证 实验室 设备预算 科学方法",
     keywordsEn: "replication independent verification laboratory equipment budget scientific method",
     href: "/experiment/replicate",

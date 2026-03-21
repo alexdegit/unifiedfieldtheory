@@ -21,7 +21,7 @@ const navItems: Record<Locale, { href: string; label: string }[]> = {
     { href: "/experiment/overview", label: "Experiments" },
     { href: "/comparison/navy-patents", label: "Comparison" },
     { href: "/applications/overview", label: "Applications" },
-    { href: "/guoke/overview", label: "Guoke" },
+    { href: "/guoke/overview", label: "Guoke Civilization" },
     { href: "/about/zhang", label: "About" },
   ],
 };
@@ -41,10 +41,16 @@ export default function Header({ locale }: { locale: string }) {
     <header className="bg-primary-900 text-white sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href={`/${loc}`} className="text-lg font-bold tracking-wide">
-          统一场论{" "}
-          <span className="text-gold-400 text-sm font-normal">
-            Unified Field Theory
-          </span>
+          {loc === "zh" ? (
+            <>
+              统一场论{" "}
+              <span className="text-gold-400 text-sm font-normal">
+                Unified Field Theory
+              </span>
+            </>
+          ) : (
+            "Unified Field Theory"
+          )}
         </Link>
 
         {/* Desktop nav */}

@@ -68,7 +68,7 @@ export default function ReplicatePage({ params }: { params: { locale: string } }
         <div className="bg-primary-50 p-6 rounded-lg my-6">
           <div className="text-center mb-4">
             <span className="text-3xl font-bold text-primary-800">
-              ~2000&ndash;2500 {t("元人民币", "RMB")}
+              {t("~2000\u20132500 元人民币", "~$300\u2013500 USD")}
             </span>
             <p className="text-sm text-gray-600 mt-1">
               {t("基础实验方案的总预算", "Total budget for the basic experimental setup")}
@@ -85,23 +85,23 @@ export default function ReplicatePage({ params }: { params: { locale: string } }
               <tbody>
                 <tr>
                   <td className="p-2">{t("高压发生器模块 × 3", "High-voltage generator modules × 3")}</td>
-                  <td className="p-2">~300&ndash;500 RMB</td>
+                  <td className="p-2">{t("~300\u2013500 元", "~$40\u201370")}</td>
                 </tr>
                 <tr>
                   <td className="p-2">{t("直流电源机箱", "DC power supply unit")}</td>
-                  <td className="p-2">~500&ndash;800 RMB</td>
+                  <td className="p-2">{t("~500\u2013800 元", "~$70\u2013110")}</td>
                 </tr>
                 <tr>
                   <td className="p-2">{t("真空罐（实验二）", "Vacuum chamber (Experiment 2)")}</td>
-                  <td className="p-2">~300&ndash;500 RMB</td>
+                  <td className="p-2">{t("~300\u2013500 元", "~$40\u201370")}</td>
                 </tr>
                 <tr>
                   <td className="p-2">{t("硅胶管、导线、绝缘材料", "Silicone tubes, wires, insulation materials")}</td>
-                  <td className="p-2">~200&ndash;300 RMB</td>
+                  <td className="p-2">{t("~200\u2013300 元", "~$30\u201340")}</td>
                 </tr>
                 <tr>
                   <td className="p-2">{t("悬挂装置及其他耗材", "Suspension apparatus and consumables")}</td>
-                  <td className="p-2">~100&ndash;200 RMB</td>
+                  <td className="p-2">{t("~100\u2013200 元", "~$15\u201330")}</td>
                 </tr>
               </tbody>
             </table>

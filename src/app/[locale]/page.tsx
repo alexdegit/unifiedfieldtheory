@@ -55,7 +55,7 @@ export default function HomePage({
       title: t("实验验证", "Experimental Verification"),
       description: t(
         "加速电荷产生引力场、变化磁场令小球旋转。低成本可复现方案，设备预算仅需几千元。",
-        "Accelerating charges generate gravitational fields; changing magnetic fields cause balls to rotate. Low-cost reproducible setup for just a few thousand RMB."
+        "Accelerating charges generate gravitational fields; changing magnetic fields cause balls to rotate. Low-cost reproducible setup for approximately $300-500 USD."
       ),
       href: `/${loc}/experiment/overview`,
       icon: (
@@ -207,7 +207,7 @@ export default function HomePage({
                 title: t("低成本可复现", "Low-Cost and Reproducible"),
                 desc: t(
                   "与美国海军需要数百万美元的设备不同，张祥前的实验方案仅需几千元人民币的设备即可尝试复现。",
-                  "Unlike the US Navy's multi-million dollar equipment, Zhang's experimental setup can be replicated with just a few thousand RMB worth of equipment."
+                  "Unlike the US Navy's multi-million dollar equipment, Zhang's experimental setup can be replicated with approximately $300-500 USD worth of equipment."
                 ),
               },
               {

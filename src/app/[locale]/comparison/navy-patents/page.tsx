@@ -204,7 +204,7 @@ export default function NavyPatentsPage({ params }: { params: { locale: string }
               </tr>
               <tr>
                 <td className="font-semibold">{t("设备复杂度", "Equipment Complexity")}</td>
-                <td>{t("简陋设备，预算约2000元", "Simple equipment, budget around 2,000 RMB")}</td>
+                <td>{t("简陋设备，预算约2000元", "Simple equipment, budget approximately $300-500 USD")}</td>
                 <td>{t("专利描述需要复杂精密设备", "Patents describe complex, sophisticated equipment")}</td>
               </tr>
               <tr>
