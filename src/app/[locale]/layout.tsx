@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SearchDialog from "@/components/SearchDialog";
 import JsonLd from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/react";
 import { isValidLocale } from "@/lib/i18n";
 import "../globals.css";
 
@@ -93,6 +94,7 @@ export default function LocaleLayout({
         <main className="min-h-screen">{children}</main>
         <Footer locale={params.locale} />
         <SearchDialog locale={params.locale} />
+        <Analytics />
       </body>
     </html>
   );
