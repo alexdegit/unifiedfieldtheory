@@ -14,6 +14,7 @@ const navItems: Record<Locale, { href: string; label: string }[]> = {
     { href: "/applications/overview", label: "应用" },
     { href: "/guoke/overview", label: "果克星球" },
     { href: "/about/zhang", label: "关于" },
+    { href: "/resources", label: "资源" },
   ],
   en: [
     { href: "/", label: "Home" },
@@ -23,6 +24,7 @@ const navItems: Record<Locale, { href: string; label: string }[]> = {
     { href: "/applications/overview", label: "Applications" },
     { href: "/guoke/overview", label: "Guoke Civilization" },
     { href: "/about/zhang", label: "About" },
+    { href: "/resources", label: "Resources" },
   ],
 };
 

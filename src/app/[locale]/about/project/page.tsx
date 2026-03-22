@@ -123,7 +123,7 @@ export default function ProjectPage({ params }: { params: { locale: string } }) 
           )}
         </p>
         <ul>
-          <li>{t("电子邮件：（即将开通）", "Email: (coming soon)")}</li>
+          <li>{t(<>电子邮件：<a href="mailto:mr.arink@gmail.com" className="text-primary-700">mr.arink@gmail.com</a></>, <>Email: <a href="mailto:mr.arink@gmail.com" className="text-primary-700">mr.arink@gmail.com</a></>)}</li>
         </ul>
       </div>
 

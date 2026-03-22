@@ -60,6 +60,16 @@ export default function GuokeOverviewPage({ params }: { params: { locale: string
           </ul>
         </div>
 
+        <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-xl p-6 my-8">
+          <h3 className="mt-0 text-blue-800">{t("两大网络", "Two Core Networks")}</h3>
+          <p className="text-gray-700 mb-0 leading-relaxed">
+            {t(
+              "果克文明的日常运转依赖两大网络：全球公众信息网负责通讯、信息查询、身份认证、意识备份等信息服务；全球公众运动网负责交通、物质搬运、能量传输、犯罪阻止等物理服务。两大网络覆盖全球每一个人，时刻提供服务，是果克文明的两条腿。",
+              "The daily operation of the Guoke civilization relies on two core networks: the Global Public Information Network handles communication, information queries, identity authentication, consciousness backup, and other information services; the Global Public Motion Network handles transportation, material transfer, energy transmission, crime prevention, and other physical services. Both networks cover every individual on the planet, providing constant service — they are the two legs of the Guoke civilization."
+            )}
+          </p>
+        </div>
+
         <h2>{t("核心基础设施：9个同步轨道人工场发射中心", "Core Infrastructure: 9 Synchronous Orbital Artificial Field Emission Centers")}</h2>
         <p>
           {t(
@@ -71,7 +81,7 @@ export default function GuokeOverviewPage({ params }: { params: { locale: string
           <h3 className="mt-0 text-primary-800">{t("发射中心核心参数", "Emission Center Core Parameters")}</h3>
           <ul className="space-y-2">
             <li>{t("位置：同步轨道卫星上", "Location: on synchronous orbit satellites")}</li>
-            <li>{t("核心部件：粒子循环装置", "Core component: particle circulation device")}</li>
+            <li>{t("核心部件：粒子环流装置", "Core component: particle circulating-flow device")}</li>
             <li>{t("环形直径：约10公里", "Ring diameter: approximately 10 km")}</li>
             <li>{t("管道直径：约1公里", "Tube diameter: approximately 1 km")}</li>
           </ul>

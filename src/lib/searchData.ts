@@ -211,6 +211,16 @@ export const searchData: SearchItem[] = [
     href: "/about/zhang",
   },
   {
+    id: "resources",
+    title: "资源与联系",
+    titleEn: "Resources & Contact",
+    description: "原始资料下载、独立复现呼吁、联系方式。Google Drive资料库。",
+    descriptionEn: "Original materials download, call for independent replication, contact information. Google Drive repository.",
+    keywords: "资源 下载 联系 复现 Google Drive 资料",
+    keywordsEn: "resources download contact replication Google Drive materials",
+    href: "/resources",
+  },
+  {
     id: "about-project",
     title: "关于本项目",
     titleEn: "About This Project",

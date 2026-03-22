@@ -95,7 +95,7 @@ function drawSpiralSingle(ctx: CanvasRenderingContext2D, w: number, h: number, t
     for (let i = 0; i <= 120; i++) {
       const frac = i / 120;
       const r = frac * maxR;
-      const angle = baseAngle + frac * Math.PI * 6 + time * 0.8;
+      const angle = baseAngle + frac * Math.PI * 6 - time * 0.8;
       const x = cx + Math.cos(angle) * r;
       const y = cy + Math.sin(angle) * r;
       if (i === 0) ctx.moveTo(x, y);
@@ -126,7 +126,7 @@ function drawSpiralPair(ctx: CanvasRenderingContext2D, w: number, h: number, tim
     for (let i = 0; i <= 80; i++) {
       const frac = i / 80;
       const r = frac * maxR;
-      const angle = baseAngle + frac * Math.PI * 4 + time;
+      const angle = baseAngle + frac * Math.PI * 4 - time;
       const x = leftX + Math.cos(angle) * r;
       const y = cy + Math.sin(angle) * r;
       if (i === 0) ctx.moveTo(x, y);
@@ -144,7 +144,7 @@ function drawSpiralPair(ctx: CanvasRenderingContext2D, w: number, h: number, tim
     for (let i = 0; i <= 80; i++) {
       const frac = 1 - i / 80; // reverse for converging
       const r = frac * maxR;
-      const angle = baseAngle - frac * Math.PI * 4 + time;
+      const angle = baseAngle - frac * Math.PI * 4 - time;
       const x = rightX + Math.cos(angle) * r;
       const y = cy + Math.sin(angle) * r;
       if (i === 0) ctx.moveTo(x, y);
@@ -245,7 +245,7 @@ function drawSpiralComponents(ctx: CanvasRenderingContext2D, w: number, h: numbe
   ctx.stroke();
   // Green dots orbiting
   for (let d = 0; d < 3; d++) {
-    const angle = time * 1.5 + (d / 3) * Math.PI * 2;
+    const angle = -time * 1.5 + (d / 3) * Math.PI * 2;
     const x = cx + Math.cos(angle) * radius;
     const y = cy + Math.sin(angle) * radius * 0.4;
     ctx.beginPath();
@@ -259,7 +259,7 @@ function drawSpiralComponents(ctx: CanvasRenderingContext2D, w: number, h: numbe
   ctx.lineWidth = 2;
   const numArrows = 8;
   for (let a = 0; a < numArrows; a++) {
-    const angle = (a / numArrows) * Math.PI * 2 + time * 0.3;
+    const angle = (a / numArrows) * Math.PI * 2 - time * 0.3;
     const outerR = radius * 1.4;
     const innerR = radius * 0.3;
     const ox = cx + Math.cos(angle) * outerR;
@@ -310,7 +310,7 @@ function drawForcesHelix(ctx: CanvasRenderingContext2D, w: number, h: number, ti
   for (let i = 0; i <= segments; i++) {
     const frac = i / segments;
     const y = axisY0 + frac * (axisY1 - axisY0);
-    const angle = frac * Math.PI * 8 + time;
+    const angle = frac * Math.PI * 8 - time;
     const x = cx + Math.cos(angle) * radius;
     const depth = Math.sin(angle);
     ctx.globalAlpha = 0.4 + depth * 0.3 + 0.3;
@@ -388,7 +388,7 @@ function drawForcesCircular(ctx: CanvasRenderingContext2D, w: number, h: number,
 
     // Orbiting dots
     for (let d = 0; d < 3; d++) {
-      const angle = time * 1.2 * (1 + radii.indexOf(r) * 0.3) + (d / 3) * Math.PI * 2;
+      const angle = -time * 1.2 * (1 + radii.indexOf(r) * 0.3) + (d / 3) * Math.PI * 2;
       const x = cx + Math.cos(angle) * r;
       const y = cy + Math.sin(angle) * r * 0.6;
       ctx.beginPath();
@@ -485,7 +485,7 @@ function drawEntangleStep(ctx: CanvasRenderingContext2D, w: number, h: number, t
     for (let i = 0; i <= 100; i++) {
       const frac = i / 100;
       const r = frac * radius * 2;
-      const angle = frac * Math.PI * 6 + time;
+      const angle = frac * Math.PI * 6 - time;
       if (i === 0) ctx.moveTo(cx + Math.cos(angle) * r, cy + Math.sin(angle) * r);
       else ctx.lineTo(cx + Math.cos(angle) * r, cy + Math.sin(angle) * r);
     }

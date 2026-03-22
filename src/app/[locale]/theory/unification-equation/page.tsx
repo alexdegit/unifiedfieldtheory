@@ -35,7 +35,7 @@ export default function UnificationEquationPage({ params }: { params: { locale: 
         <div className="flex justify-center my-10">
           <div className="text-3xl md:text-5xl">
             <Formula
-              tex="\\\\frac{4\\\\pi^2 \\\\gamma^3 C^2}{T^2 G h \\\\nu} = 1"
+              tex="\\\\frac{4\\\\pi^2 r^3 C^2}{T^2 G h \\\\nu} = 1"
               display
             />
           </div>
@@ -59,8 +59,8 @@ export default function UnificationEquationPage({ params }: { params: { locale: 
                 <td className="px-4 py-2">{t("牛顿引力 / 广义相对论", "Newtonian gravity / General relativity")}</td>
               </tr>
               <tr className="border-b bg-gray-50">
-                <td className="px-4 py-2 font-mono font-bold">γ</td>
-                <td className="px-4 py-2">{t("物体周围空间螺旋运动的半径", "Radius of helical spatial motion around matter")}</td>
+                <td className="px-4 py-2 font-mono font-bold">r</td>
+                <td className="px-4 py-2">{t("物体周围空间螺旋运动的半径（等价于开普勒定律中的轨道半径）", "Radius of helical spatial motion around matter (equivalent to the orbital radius in Kepler's law)")}</td>
                 <td className="px-4 py-2">{t("统一场论", "Unified Field Theory")}</td>
               </tr>
               <tr className="border-b">
@@ -159,12 +159,12 @@ export default function UnificationEquationPage({ params }: { params: { locale: 
                 </h3>
                 <p className="text-gray-600">
                   {t(
-                    <>将 <Formula tex="M = h\\\\nu / c^2" /> 代入开普勒定律，并将 r 替换为 γ（螺旋半径）：</>,
-                    <>Replace <Formula tex="M = h\\\\nu / c^2" /> into Kepler&apos;s law, replace r with γ (helical radius):</>
+                    <>将 <Formula tex="M = h\\\\nu / c^2" /> 代入开普勒定律，r 即为螺旋半径：</>,
+                    <>Substitute <Formula tex="M = h\\\\nu / c^2" /> into Kepler&apos;s law, where r is the helical radius:</>
                   )}
                 </p>
                 <div className="bg-white p-4 rounded-lg text-center my-3">
-                  <Formula tex="\\\\frac{4\\\\pi^2 \\\\gamma^3 c^2}{T^2 G h \\\\nu} = 1" display />
+                  <Formula tex="\\\\frac{4\\\\pi^2 r^3 c^2}{T^2 G h \\\\nu} = 1" display />
                 </div>
                 <p className="text-gray-600 mb-0 font-semibold">
                   {t(
@@ -197,13 +197,13 @@ export default function UnificationEquationPage({ params }: { params: { locale: 
           </h2>
           <p className="text-gray-700">
             {t(
-              <>如果假设螺旋旋转速度等于光速（统一场论基本假设），即 <Formula tex="T = 2\\\\pi\\\\gamma / c" />，代入方程可得：</>,
-              <>If we assume helical rotation speed equals light speed (UFT basic assumption), i.e., <Formula tex="T = 2\\\\pi\\\\gamma / c" />, substituting into the equation yields:</>
+              <>如果假设螺旋旋转速度等于光速（统一场论基本假设），即 <Formula tex="T = 2\\\\pi r / c" />，代入方程可得：</>,
+              <>If we assume helical rotation speed equals light speed (UFT basic assumption), i.e., <Formula tex="T = 2\\\\pi r / c" />, substituting into the equation yields:</>
             )}
           </p>
           <div className="bg-white/60 p-4 rounded-lg text-center my-4">
             <div className="text-2xl">
-              <Formula tex="\\\\gamma = \\\\frac{Gm}{c^2}" display />
+              <Formula tex="r = \\\\frac{Gm}{c^2}" display />
             </div>
           </div>
           <p className="text-gray-700 mb-0 leading-relaxed">
@@ -224,10 +224,10 @@ export default function UnificationEquationPage({ params }: { params: { locale: 
             <p className="mb-0 text-gray-500">{t("// 电子参数", "// Electron parameters")}</p>
             <p className="mb-0 text-gray-800">m_e &nbsp;= 9.10938 × 10⁻³¹ kg</p>
             <p className="mb-0 text-gray-800">ν &nbsp;&nbsp;&nbsp;= m_e·c²/h = 1.236 × 10²⁰ Hz</p>
-            <p className="mb-0 text-gray-800">γ &nbsp;&nbsp;&nbsp;= G·m_e/c² = 6.765 × 10⁻⁵⁸ m</p>
-            <p className="mb-0 text-gray-800">T &nbsp;&nbsp;&nbsp;= 2πγ/c &nbsp;&nbsp;&nbsp;= 1.418 × 10⁻⁶⁵ s</p>
+            <p className="mb-0 text-gray-800">r &nbsp;&nbsp;&nbsp;= G·m_e/c² = 6.765 × 10⁻⁵⁸ m</p>
+            <p className="mb-0 text-gray-800">T &nbsp;&nbsp;&nbsp;= 2πr/c &nbsp;&nbsp;&nbsp;= 1.418 × 10⁻⁶⁵ s</p>
             <p className="mb-0 mt-3 pt-3 border-t border-gray-300 text-gray-500">{t("// 代入方程", "// Substitute into equation")}</p>
-            <p className="mb-0 text-gray-800">4π²γ³c² / (T²·G·h·ν)</p>
+            <p className="mb-0 text-gray-800">4π²r³c² / (T²·G·h·ν)</p>
             <p className="mb-0 text-primary-700 font-bold text-base mt-2">
               = 1.000000 &nbsp;&nbsp;✓ {t("完美等于 1", "Perfectly equals 1")}
             </p>

@@ -31,6 +31,14 @@ export default function ZhangPage({ params }: { params: { locale: string } }) {
         </p>
 
         <h2>{t("个人经历", "Personal Background")}</h2>
+        <div className="bg-gray-50 p-6 rounded-lg my-6">
+          <ul className="space-y-2 mb-0">
+            <li><strong>{t("出生年份", "Year of Birth")}</strong>{t("：1967年", ": 1967")}</li>
+            <li><strong>{t("学历", "Education")}</strong>{t("：初中", ": Middle school")}</li>
+            <li><strong>{t("现居", "Residence")}</strong>{t("：安徽省庐江县同大镇二龙新街", ": Erlong New Street, Tongda Town, Lujiang County, Anhui Province, China")}</li>
+            <li><strong>{t("职业", "Occupation")}</strong>{t("：以电焊和修自行车为生，业余时间研究统一场论", ": Makes a living through electric welding and bicycle repair, researches unified field theory in his spare time")}</li>
+          </ul>
+        </div>
         <p>
           {t(
             "张祥前，安徽庐江人，农民出身。他没有接受过系统的高等物理教育，但凭借自学和思考，建立了一套完整的统一场论体系。",
@@ -47,14 +55,8 @@ export default function ZhangPage({ params }: { params: { locale: string } }) {
         <h2>{t("1985年的经历", "The 1985 Experience")}</h2>
         <p>
           {t(
-            "据张祥前自述，1985年他经历了一次非同寻常的事件，这次经历成为他此后研究的起点和动力。他声称接触到了关于宇宙基本规律的信息，此后花了四十年时间用物理学语言来理解和表达这些信息。",
-            "According to Zhang Xiangqian's own account, in 1985 he experienced an extraordinary event that became the starting point and driving force for all his subsequent research. He claims to have encountered information about the fundamental laws of the universe, and has spent the following forty years trying to understand and express this information in the language of physics."
-          )}
-        </p>
-        <p>
-          {t(
-            "对于这段经历，本站不做真假判断。我们关注的是他由此发展出的物理理论本身——因为理论可以通过实验来检验，这才是科学方法的核心。",
-            "This site makes no judgment on the truth of this experience. What we focus on is the physics theory he developed from it — because theories can be tested through experiments, and that is the core of the scientific method."
+            "据张祥前自述，1985年夏天他被带到一个名为果克的外星球生活了约一个月，从那里获得了统一场论的核心知识和人工场扫描技术。对于这段经历，本站不做真假判断——我们关注的是他由此发展出的物理理论，因为理论可以通过实验来检验。",
+            "According to Zhang Xiangqian's own account, in the summer of 1985 he was taken to an alien planet called Guoke where he lived for about one month, acquiring core knowledge of unified field theory and artificial field scanning technology. This site makes no judgment on the truth of this experience — what we focus on is the physics theory he developed from it, because theories can be tested through experiments."
           )}
         </p>
 

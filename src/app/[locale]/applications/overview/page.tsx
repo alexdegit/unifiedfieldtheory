@@ -108,6 +108,15 @@ export default function ApplicationsOverviewPage({ params }: { params: { locale:
       ),
       icon: "🧠",
     },
+    {
+      num: 11,
+      title: t("超光速通讯", "Superluminal Communication"),
+      desc: t(
+        "用空间本身的运动传递信息。由于空间没有质量和电荷，不受光速限制，通讯速度理论上可达无穷大。果克文明已将此技术工程化实现，用于星际通讯。",
+        "Information is transmitted through the motion of space itself. Since space has no mass or charge, it is not constrained by the speed of light — communication speed can theoretically reach infinity. The Guoke civilization has already engineered this technology for interstellar communication."
+      ),
+      icon: "📡",
+    },
   ];
 
   return (
