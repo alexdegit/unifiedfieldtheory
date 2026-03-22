@@ -65,6 +65,30 @@ export default function TheoryOverviewPage({ params }: { params: { locale: strin
                 "18 core equations and grand unification derivation"
               ),
             },
+            {
+              href: `/${loc}/theory/unification-equation`,
+              title: t("时空归一化方程", "Spacetime Unification Equation"),
+              description: t(
+                "G、h、c 在同一个方程中 — 三大理论的统一",
+                "G, h, c in one equation — unifying three theories"
+              ),
+            },
+            {
+              href: `/${loc}/theory/deep-dive`,
+              title: t("从零开始理解", "Understanding from Scratch"),
+              description: t(
+                "11步阶梯式科普，不用公式理解统一场论",
+                "11-step explainer, understand without formulas"
+              ),
+            },
+            {
+              href: `/${loc}/theory/visualization`,
+              title: t("交互式可视化", "Interactive Visualization"),
+              description: t(
+                "螺旋运动、四种力、量子纠缠的动画演示",
+                "Animated demos of helical motion, four forces, entanglement"
+              ),
+            },
           ].map((item) => (
             <Link
               key={item.href}

@@ -362,7 +362,57 @@ export default function ExperimentSetupPage({ params }: { params: { locale: stri
               <><strong>Identifying module polarity</strong>: Separate the two output wires by 8-10cm, light a candle below — the direction the flame leans toward is the negative terminal</>
             )}
           </li>
+          <li>
+            {t(
+              <><strong>高压包替代</strong>：高压包输出的脉冲直流电杂波严重，有条件用纯直流高压源效果更好</>,
+              <><strong>High-voltage module alternative</strong>: The pulsed DC output from high-voltage modules has significant noise; a pure DC high-voltage source produces better results if available</>
+            )}
+          </li>
         </ul>
+
+        <h2>{t("低压方案（80V/30A）", "Low-Voltage Setup (80V/30A)")}</h2>
+        <p>
+          {t(
+            "除了高压方案，张祥前还发现了低压条件下也能观测到效应的方案，大幅降低了复现门槛和安全风险。",
+            "In addition to the high-voltage setup, Zhang Xiangqian also discovered a low-voltage approach that can observe the effect, significantly lowering the replication threshold and safety risks."
+          )}
+        </p>
+        <div className="overflow-x-auto">
+          <table>
+            <thead>
+              <tr>
+                <th>{t("参数", "Parameter")}</th>
+                <th>{t("数值", "Value")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{t("交流电方案", "AC Setup")}</td>
+                <td>{t("电流30A，频率50Hz，电压80V", "Current 30A, frequency 50Hz, voltage 80V")}</td>
+              </tr>
+              <tr>
+                <td>{t("铁芯气隙磁场峰值", "Iron core air gap peak magnetic field")}</td>
+                <td>{t("约0.1-0.3特斯拉", "Approximately 0.1-0.3 Tesla")}</td>
+              </tr>
+              <tr>
+                <td>{t("直流电方案", "DC Setup")}</td>
+                <td>{t("12V-80V，电流30A-130A", "12V-80V, current 30A-130A")}</td>
+              </tr>
+              <tr>
+                <td>{t("电源选择", "Power source")}</td>
+                <td>{t("电瓶或交流转直流电源", "Car battery or AC-to-DC power supply")}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="bg-primary-50 p-4 rounded-lg my-6">
+          <p className="text-sm text-primary-800 mb-0">
+            {t(
+              <>💡 <strong>预算对比</strong>：高压方案约2000-3000元人民币（约$300-400 USD），低压方案约500-1000元人民币（约$70-140 USD）。低压方案更安全、更便宜，推荐初次复现者使用。</>,
+              <>💡 <strong>Budget comparison</strong>: High-voltage setup approximately 2000-3000 RMB (~$300-400 USD). Low-voltage setup approximately 500-1000 RMB (~$70-140 USD). The low-voltage setup is safer and cheaper, recommended for first-time replicators.</>
+            )}
+          </p>
+        </div>
 
         <div className="bg-primary-50 p-6 rounded-lg my-6">
           <h3 className="mt-0 text-primary-800">{t("复现者须知", "Notes for Replicators")}</h3>

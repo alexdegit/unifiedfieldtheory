@@ -252,6 +252,49 @@ export default function NavyPatentsPage({ params }: { params: { locale: string }
           </li>
         </ol>
 
+        <h2>{t("三条独立信息线索的汇聚", "Three Independent Lines of Evidence Converging")}</h2>
+        <p>
+          {t(
+            <>在&ldquo;电磁场与引力场的转化&rdquo;这个方向上，至少有三条独立的信息线索在汇聚：</>,
+            <>In the direction of &quot;electromagnetic-gravitational field conversion,&quot; at least three independent lines of evidence are converging:</>
+          )}
+        </p>
+        <div className="space-y-4 my-6 not-prose">
+          <div className="p-4 bg-white rounded-lg border-l-4 border-blue-500 shadow-sm">
+            <h3 className="font-semibold text-gray-800 mb-1">1. {t("张祥前", "Zhang Xiangqian")}</h3>
+            <p className="text-sm text-gray-600">
+              {t(
+                "基于外星文明传授的知识，提出统一场论，2023年实验观测到变化电磁场产生引力场效应。美国专利US12417870。",
+                "Based on knowledge from an alien civilization, proposed the unified field theory. In 2023, experimentally observed changing electromagnetic fields producing gravitational field effects. US Patent US12417870."
+              )}
+            </p>
+          </div>
+          <div className="p-4 bg-white rounded-lg border-l-4 border-amber-500 shadow-sm">
+            <h3 className="font-semibold text-gray-800 mb-1">2. {t("美国海军Pais博士", "US Navy Dr. Pais")}</h3>
+            <p className="text-sm text-gray-600">
+              {t(
+                "基于广义相对论推演，申请惯性质量减少装置和引力波发生器专利（US10144532B2、US10322827）。海军首席技术官亲自担保可行性。",
+                "Based on general relativity derivations, filed patents for inertial mass reduction device and gravitational wave generator (US10144532B2, US10322827). The Navy&apos;s Chief Technology Officer personally vouched for feasibility."
+              )}
+            </p>
+          </div>
+          <div className="p-4 bg-white rounded-lg border-l-4 border-green-500 shadow-sm">
+            <h3 className="font-semibold text-gray-800 mb-1">3. {t("2021年布鲁克海文实验", "2021 Brookhaven Experiment")}</h3>
+            <p className="text-sm text-gray-600">
+              {t(
+                "在高能重离子碰撞中直接观测到光子碰撞产生电子（布雷特-惠勒过程），2026年进一步证明产生的物质来自量子真空涨落并保留100%自旋关联。",
+                "Directly observed photon-photon collisions producing electrons (Breit-Wheeler process) in heavy-ion collisions. Further confirmed in 2026 that the produced matter originates from quantum vacuum fluctuations and retains 100% spin correlation."
+              )}
+            </p>
+          </div>
+        </div>
+        <p>
+          {t(
+            "三条线索来源完全不同，但指向同一个方向：电磁场和引力场之间存在可操控的转化关系，空间本身具有可被激活的物质结构。",
+            "Three lines of evidence from completely different sources, all pointing in the same direction: there exists a controllable conversion relationship between electromagnetic and gravitational fields, and space itself has a material structure that can be activated."
+          )}
+        </p>
+
         <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg my-6">
           <p className="text-sm text-yellow-800 mb-0">
             <strong>{t("说明：", "Disclaimer: ")}</strong>
